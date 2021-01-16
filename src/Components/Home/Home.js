@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Status from '../Status/Status';
 
+
+
 const Home = () => {
     
 
@@ -17,10 +19,11 @@ const Home = () => {
 
     return (
         <div>
+            
             {
                 Comment.map(comments => <Status comments={comments} ></Status>)
             }
-             <Status></Status>
+            
         </div>
     );
 };
