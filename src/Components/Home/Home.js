@@ -6,22 +6,22 @@ import Status from '../Status/Status';
 const Home = () => {
     
 
-    const [Comment,setComment] =useState([])
+    const [Post,setPost] =useState([])
      useEffect (()=>{
         const url = `https://jsonplaceholder.typicode.com/posts`
           fetch (url)
           .then (res => res.json())
-          .then (data => setComment(data))
-          console.log(Comment);
+          .then (data => setPost(data))
+         // console.log(Comment);
 
     },[])
 
 
     return (
         <div>
-            
+            <h4>Post : {Post.length}</h4>
             {
-                Comment.map(comments => <Status comments={comments} ></Status>)
+                Post.map(Post => <Status Post={Post} ></Status>)
             }
             
         </div>
