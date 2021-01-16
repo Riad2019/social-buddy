@@ -9,6 +9,8 @@ import {
   Link
 } from "react-router-dom";
 import StatusDetails from './Components/StatusDetails/StatusDetails';
+import NoMatch from './NoMatch/NoMatch';
+
 
 
 function App() {
@@ -25,9 +27,16 @@ function App() {
 
             <StatusDetails></StatusDetails>
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
+
+          <Route path="*">
+                <NoMatch></NoMatch>
+              
+        </Route>
+
+
         </Switch>
      
       
